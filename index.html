@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adebayo Oreoluwa Victoria</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Adebayo Oreoluwa Victoria</h1>
+        <p>Web Designer | Chef | Singer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="ceo.png" alt="Oreoluwa CEO" />
+        <p>I am Adebayo Oreoluwa Victoria, a student of the University of Ilorin. Passionate about creating elegant web solutions and cooking delightful meals.</p>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Lafarge Website</h3>
+            <p>Built a company profile website using HTML and CSS.</p>
+            <img src="placeholder.png" alt="Lafarge Website Screenshot" />
+        </div>
+        <div class="project">
+            <h3>Ore's Kitchen</h3>
+            <p>Cooking recipe and service site.</p>
+            <img src="chef.png" alt="Chef Adebayo" />
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-message"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Adebayo Oreoluwa Victoria | 21/66MC091</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('form-message').textContent = "Thank you for reaching out!";
+        });
+    </script>
+</body>
+</html>
