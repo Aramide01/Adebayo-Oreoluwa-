@@ -1,82 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adebayo Oreoluwa Victoria - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adebayo Oreoluwa Victoria</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">Oreoluwa Victoria</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Home Section -->
+  <header>
+    <h1>Adebayo Oreoluwa Victoria</h1>
+    <p>Web Designer | Chef | Singer</p>
+    <p>Welcome to my personal website!</p>
+  </header>
 
-  <section id="home" class="hero">
-    <h1>Hello, I'm <span>Oreoluwa</span></h1>
-    <p>Web Designer • Chef • Singer</p>
-    <p>Welcome to my personal portfolio website</p>
-  </section>
-
-  <section id="about" class="about">
+  <!-- About Section -->
+  <section id="about">
     <h2>About Me</h2>
+    <img src="images/Oreoluwa.png" alt="CEO Photo" width="250" />
     <p>
-      I am Adebayo Oreoluwa Victoria, an undergraduate of the University of Ilorin.
-      I specialize in designing responsive websites using HTML and CSS, and I'm also a passionate chef and singer.
+      I'm Adebayo Oreoluwa Victoria, an undergraduate at the University of Ilorin.<br>
+      I'm passionate about web design and development. My key skills include HTML, CSS, and JavaScript.
     </p>
-    <div class="skills">
-      <strong>Skills:</strong> HTML, CSS, JavaScript
-    </div>
-    <img src="images/Oreoluwa.png" alt="CEO Portrait" />
   </section>
 
-  <section id="projects" class="projects">
-    <h2>My Projects</h2>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
     <div class="project">
       <h3>Lafarge Website</h3>
       <p>Built a company profile website using HTML and CSS.</p>
-      <img src="images/Lafarge.png" alt="Lafarge Website Screenshot" />
+      <img src="images/Lafarge.png" alt="Lafarge Website Screenshot" width="300" />
     </div>
+
     <div class="project">
       <h3>Ore's Kitchen</h3>
-      <p>A cooking recipe and service site showcasing my chef skills.</p>
-      <img src="images/Adebayo_Oreoluw.png" alt="Chef Project Screenshot" />
+      <p>Cooking recipe and service site.</p>
+      <img src="images/Adebayo_Oreoluw.png" alt="Ore's Kitchen Screenshot" width="300" />
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <!-- Contact Section -->
+  <section id="contact">
     <h2>Contact Me</h2>
-    <form id="contactForm">
+    <form id="contact-form">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" required />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" required />
 
       <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
+      <textarea id="message" required></textarea>
 
       <button type="submit">Send Message</button>
     </form>
-    <p id="confirmation" style="display:none; color:green;">Thank you! Your message has been sent.</p>
+    <p id="form-response"></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Adebayo Oreoluwa Victoria. All rights reserved.</p>
+    <p>&copy; 2025 Adebayo Oreoluwa Victoria</p>
   </footer>
 
   <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
-      document.getElementById("confirmation").style.display = "block";
+      document.getElementById("form-response").textContent = "Thank you for your message!";
       this.reset();
     });
   </script>
